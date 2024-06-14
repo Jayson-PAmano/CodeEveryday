@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Daily Coding | 1</title>
+  </head>
+  <body>
+    <script>
+      let colors = ["red", "green", "blue", "yellow"];
+      let colors2 = ["pink", "orange", "purple", "gray"];
+      let heroes = ["avian", "sparkman", "clayman", "bubbleman"];
+      let count = 0;
+      let name = "Jaden Yuki";
+
+      let person = {
+        firstName: "Jaden",
+        lastName: "Yuki",
+        deck: "E-Hero",
+        dorm: "Sliffer Red",
+        eyeColor: "Brown",
+        age: 14,
+        // fullName: function () {
+        //   return this.firstName + " " + this.lastName;
+        // },
+      };
+
+      let callPerson = {
+        fullDetails: function () {
+          return this.firstName + " " + this.lastName + ", " + this.deck;
+        },
+      };
+
+      //   console.log(person.fullName());
+      console.log(callPerson.fullDetails.call(person));
+
+      while (count < colors.length) {
+        console.log("Index: " + count);
+        console.log("Color: " + colors[count]);
+        count++;
+      }
+
+      for (let myColor of colors2) {
+        console.log("Fav.Color: " + myColor);
+      }
+
+      for (let i = 0; i < name.length; i++) {
+        console.log(name[i]);
+      }
+
+      const keys = Object.keys(person);
+
+      let i = 0;
+      while (i < keys.length) {
+        const key = keys[i];
+        console.log(key + ": " + person[key]);
+        i++;
+      }
+    </script>
+  </body>
+</html>
