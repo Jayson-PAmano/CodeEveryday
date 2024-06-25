@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Daily Coding | 3</title>
+  </head>
+  <body>
+    <h1>JavaScript Daily Coding</h1>
+
+    <script>
+      let colors = ["red", "green", "blue", "yellow"];
+      let colors2 = ["pink", "orange", "purple", "gray"];
+      let heroes = ["avian", "sparkman", "clayman", "bubbleman"];
+      let count = 0;
+      let name = "Jaden Yuki";
+
+      let person = {
+        firstName: "Jaden",
+        lastName: "Yuki",
+        deck: "E-Hero",
+        dorm: "Sliffer Red",
+        eyeColor: "Brown",
+        age: 14,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      let callPerson = {
+        fullDetails: function () {
+          return this.firstName + " " + this.lastName + " " + this.deck;
+        },
+      };
+
+      const person2 = [
+        {
+          firstName: "John",
+          age: 35,
+          favColor: "Red",
+        },
+        {
+          firstName: "Mary",
+          age: 25,
+          favColor: "Blue",
+        },
+        {
+          firstName: "Jenny",
+          age: 31,
+          favColor: "Pink",
+        },
+      ];
+
+      // Loop
+
+      for (let i = 0; i < colors.length; i++) {
+        console.log("Index: " + i);
+        console.log("Color:" + colors[i]);
+      }
+
+      for (let i = 0; i < name.length; i++) {
+        console.log(name.charAt(i).toUpperCase());
+      }
+
+      //get Objects
+      console.log(person.fullName());
+      console.log(callPerson.fullDetails.call(person));
+
+      //loop an obeject
+
+      const keys = Object.keys(colors2);
+
+      for (let index = 0; index < keys.length; index++) {
+        console.log(keys[index] + " -> " + colors2[keys[index]]);
+      }
+
+      //function old way
+
+      let x = myFunc(5, 5);
+      console.log(x);
+
+      function myFunc(x, y) {
+        return x * y;
+      }
+      //without parameters
+      function getName() {
+        let name = "Jaden Yuki";
+        return name;
+      }
+      console.log(getName());
+
+      //or....
+
+      function getName2() {
+        let name = "Aster Phoenix";
+        console.log(name);
+      }
+      getName2();
+
+      function addNums() {
+        let num1 = 5;
+        let num2 = 10;
+
+        return num1 + num2;
+      }
+
+      console.log(addNums());
+
+      // with parameters
+
+      function getResult(n1, n2) {
+        return n1 * n2;
+      }
+      console.log(getResult(2, 5));
+
+      function myName(name) {
+        name = "Supreme King, Jaden";
+        console.log(name);
+      }
+      myName();
+
+      function get_Name(name) {
+        console.log(name);
+      }
+      get_Name("Zane Truesdale");
+
+      function multiplier(n1, n2, result) {
+        result = n1 * n2;
+        console.log(result);
+      }
+      multiplier(21, 23);
+
+      // loop with objects practice
+
+      const keys2 = Object.keys(heroes);
+
+      for (let i = 0; i < keys2.length; i++) {
+        console.log(keys2[i] + " >>> " + heroes[keys2[i]]);
+      }
+
+      // function, new way
+
+      const greatPeople = (name) => {
+        console.log("Hello, " + name);
+      };
+      greatPeople("Linda");
+
+      sayHello = () => {
+        console.log("Hello, World");
+      };
+      sayHello();
+
+      add_Num = (n1, n2) => {
+        return n1 + n2;
+      };
+      console.log(add_Num(5, 23));
+
+      Multiplier = (a, b) => console.log(a * b);
+      Multiplier(22, 3);
+
+      greatJaden = (name) => (name = `hELLO, ${name}`);
+      console.log(greatJaden("JADEN"));
+    </script>
+  </body>
+</html>
