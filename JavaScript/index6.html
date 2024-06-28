@@ -55,64 +55,75 @@
 
       // get objects
 
-      console.log(person.firstName + " " + person.lastName);
+      console.log(person.fullName());
+      console.log(callPerson.fullDetails.call(person));
 
-      console.log("Details: " + callPerson.fullDetails.call(person));
-
-      // loop through an object
-
-      let keys = Object.keys(colors);
+      const keys = Object.keys(person);
 
       for (let i = 0; i < keys.length; i++) {
-        console.log(keys[i] + " -> " + "Color: " + colors[keys[i]]);
+        console.log(keys[i] + "-> " + person[keys[i]]);
       }
 
-      // loop an array
+      // LOOPS
 
-      for (let i = 0; i < colors2.length; i++) {
-        console.log("Index: " + i);
-        console.log("Color: " + colors2[i]);
+      // loop through numbers
+      for (let index = 0; index <= 10; index++) {
+        console.log("Number is " + index);
       }
 
-      // loop a string of text
+      // loop through an array
 
-      while (count < name.length) {
-        console.log(name.charAt(count));
+      for (let colorIndex = 0; colorIndex < colors.length; colorIndex++) {
+        console.log("Position: " + colorIndex);
+        console.log("Color: " + colors2[colorIndex]);
+      }
+
+      // Using while loop
+
+      while (count < heroes.length) {
+        console.log("Hero #: " + count);
+        console.log("E-Hero: " + heroes[count].toUpperCase());
         count++;
       }
+      // Using for in loop
 
-      while (count2 < name2.length) {
-        console.log(name2[count2]);
-        count2++;
+      for (let myColors of colors) {
+        console.log(myColors);
       }
 
-      // function (old way)
+      // FUNCTIONS
 
-      // without parameters
-      function getName() {
-        let myName = " Jaden Yuki";
-        console.log(myName);
-      }
-      getName();
-      function getName2() {
-        let myName = " Aster Phoenix";
-        return myName;
-      }
-      console.log(getName2());
+      // New way
 
-      function addNum() {
-        let num1 = 2;
-        let num2 = 3;
+      sayHello = () => {
+        console.log("Hello");
+      };
+      sayHello();
+
+      getName = (name) => {
+        return name;
+      };
+      console.log(getName("Jaden Yuki"));
+
+      addNums = (num1, num2) => {
         return num1 + num2;
-      }
-      console.log(addNum());
+      };
+      console.log(addNums(10, 2));
 
-      // with parameters
+      addNums2 = (num1, num2) => {
+        console.log(num1 + num2);
+      };
+      addNums2(5, 5);
 
-      function addNumbers(n1, n2) {
-        return n1 + n2;
-      }
-      console.log(addNumbers(5, 12));
+      addNums3 = (num1, num2, sum) => {
+        num1 = 20;
+        num2 = 30;
+
+        sum = num1 + num2;
+        console.log(sum); // return sum
+      };
+
+      addNums3(); //or.... console.log(addNums3())
     </script>
   </body>
 </html>
