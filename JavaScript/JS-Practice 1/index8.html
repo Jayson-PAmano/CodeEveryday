@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Daily Coding</title>
+  </head>
+  <body>
+    <h1 style="cursor: pointer">JavaScript Daily Coding</h1>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <button type="button" id="myBtn">Click me</button>
+    <script>
+      let colors = ["red", "green", "blue", "yellow"];
+      let colors2 = ["pink", "orange", "purple", "gray"];
+      let heroes = ["avian", "sparkman", "clayman", "bubbleman"];
+      let count = 0;
+      let text = "";
+      let name = "Jaden Yuki";
+      let name2 = "Aster Phoenix";
+
+      let person = {
+        firstName: "Jaden",
+        lastName: "Yuki",
+        deck: "E-Hero",
+        dorm: "Sliffer Red",
+        eyeColor: "Brown",
+        age: 14,
+      };
+
+      let callPerson = {
+        fullDetails: function () {
+          return this.firstName + " " + this.lastName + " " + this.deck;
+        },
+      };
+
+      const person2 = [
+        {
+          firstName: "John",
+          age: 35,
+          favColor: "Red",
+        },
+        {
+          firstName: "Mary",
+          age: 25,
+          favColor: "Blue",
+        },
+        {
+          firstName: "Jenny",
+          age: 31,
+          favColor: "Pink",
+        },
+      ];
+
+      console.log("hello, world");
+
+      // Loops
+
+      for (let i = 1; i <= 10; i++) {
+        console.log("Number: " + i);
+      }
+
+      while (count <= 5) {
+        console.log("Count: " + count);
+        count++;
+      }
+
+      // loop through array
+      for (let i = 0; i < colors.length; i++) {
+        console.log("Number: " + i);
+        console.log("Color: " + colors[i]);
+      }
+      for (let myColors of colors2) {
+        console.log("Colors: " + myColors);
+      }
+    </script>
+  </body>
+</html>

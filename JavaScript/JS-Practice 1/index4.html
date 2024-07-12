@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Daily Coding | 3 DOM Manipulation</title>
+  </head>
+  <body>
+    <h1>JavaScript Daily Coding</h1>
+
+    <h2 id="demo" style="cursor: pointer">Click me</h2>
+    <h2 id="objDemo"></h2>
+
+    <h2 id="demo2"></h2>
+    <button type="button">Click me</button>
+
+    <h2 id="demo3"></h2>
+    <button type="button" id="btnChange">Click me</button>
+    <hr />
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="getName" placeholder="Juan Dela Cruz" />
+
+    <button type="button" id="getName" onclick="getName()">Click me</button>
+    <h2 id="demo4"></h2>
+    <script>
+      // Objects
+      let txt = " ";
+
+      let person = {
+        firstName: "Jaden",
+        lastName: "Yuki",
+        deck: "E-Hero",
+        dorm: "Sliffer Red",
+        eyeColor: "Brown",
+        age: 14,
+      };
+      for (let x in person) {
+        txt += person[x] + ",";
+
+        document.getElementById("objDemo").innerHTML = txt;
+      }
+
+      document.getElementById("demo").onclick = () => {
+        document.getElementById("demo").textContent = "Hello, JavaScript";
+      };
+
+      let myBtn = document.querySelector("button");
+      myBtn.addEventListener("click", () => {
+        document.getElementById("demo2").textContent = "That tickles 😁";
+      });
+
+      sayHello = () => {
+        document.getElementById("demo3").textContent = "Hello ✌";
+      };
+
+      let btnChange = document.getElementById("btnChange");
+
+      btnChange.addEventListener("click", () => {
+        sayHello();
+      });
+
+      getName = () => {
+        let GetName = document.getElementById("getName").value;
+
+        document.getElementById("demo4").textContent = `Hello, ${GetName}`;
+      };
+    </script>
+  </body>
+</html>

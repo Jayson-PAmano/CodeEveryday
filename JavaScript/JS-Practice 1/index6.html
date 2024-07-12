@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Daily Coding | 3</title>
+  </head>
+  <body>
+    <h1>JavaScript Daily Coding</h1>
+
+    <script>
+      let colors = ["red", "green", "blue", "yellow"];
+      let colors2 = ["pink", "orange", "purple", "gray"];
+      let heroes = ["avian", "sparkman", "clayman", "bubbleman"];
+      let count = 0;
+      let count2 = 0;
+      let name = "Jaden Yuki";
+      let name2 = "Aster Phoenix";
+
+      let person = {
+        firstName: "Jaden",
+        lastName: "Yuki",
+        deck: "E-Hero",
+        dorm: "Sliffer Red",
+        eyeColor: "Brown",
+        age: 14,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      let callPerson = {
+        fullDetails: function () {
+          return this.firstName + " " + this.lastName + " " + this.deck;
+        },
+      };
+
+      const person2 = [
+        {
+          firstName: "John",
+          age: 35,
+          favColor: "Red",
+        },
+        {
+          firstName: "Mary",
+          age: 25,
+          favColor: "Blue",
+        },
+        {
+          firstName: "Jenny",
+          age: 31,
+          favColor: "Pink",
+        },
+      ];
+
+      // get objects
+
+      console.log(person.fullName());
+      console.log(callPerson.fullDetails.call(person));
+
+      const keys = Object.keys(person);
+
+      for (let i = 0; i < keys.length; i++) {
+        console.log(keys[i] + "-> " + person[keys[i]]);
+      }
+
+      // LOOPS
+
+      // loop through numbers
+      for (let index = 0; index <= 10; index++) {
+        console.log("Number is " + index);
+      }
+
+      // loop through an array
+
+      for (let colorIndex = 0; colorIndex < colors.length; colorIndex++) {
+        console.log("Position: " + colorIndex);
+        console.log("Color: " + colors2[colorIndex]);
+      }
+
+      // Using while loop
+
+      while (count < heroes.length) {
+        console.log("Hero #: " + count);
+        console.log("E-Hero: " + heroes[count].toUpperCase());
+        count++;
+      }
+      // Using for in loop
+
+      for (let myColors of colors) {
+        console.log(myColors);
+      }
+
+      // FUNCTIONS
+
+      // New way
+
+      sayHello = () => {
+        console.log("Hello");
+      };
+      sayHello();
+
+      getName = (name) => {
+        return name;
+      };
+      console.log(getName("Jaden Yuki"));
+
+      addNums = (num1, num2) => {
+        return num1 + num2;
+      };
+      console.log(addNums(10, 2));
+
+      addNums2 = (num1, num2) => {
+        console.log(num1 + num2);
+      };
+      addNums2(5, 5);
+
+      addNums3 = (num1, num2, sum) => {
+        num1 = 20;
+        num2 = 30;
+
+        sum = num1 + num2;
+        console.log(sum); // return sum
+      };
+
+      addNums3(); //or.... console.log(addNums3())
+    </script>
+  </body>
+</html>
