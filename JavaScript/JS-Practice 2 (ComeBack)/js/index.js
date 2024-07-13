@@ -73,3 +73,10 @@ console.log(greetLinda("Linda"));
 
 adder = (n1, n2) => n1 + n2;
 console.log(adder(10, 20));
+
+/*****Loop an object*****/
+
+const keys = Object.keys(gxCharacter);
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i] + ": " + gxCharacter[keys[i]]);
+}
