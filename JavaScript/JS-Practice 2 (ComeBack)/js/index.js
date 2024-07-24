@@ -1,6 +1,7 @@
 let colors = ["red", "blue", "green", "yellow"];
 let colors2 = ["violet", "gray", "orange", "yellow"];
 let counter = 0;
+let counter2 = 0;
 let deck = "Elemental Hero";
 
 const gxCharacter = {
@@ -11,72 +12,60 @@ const gxCharacter = {
   eyeColor: "Brown",
   age: 14,
   fullName: function () {
-    return this.firstName + this.lastName;
+    return (
+      "Fullname: " +
+      this.firstName +
+      " " +
+      this.lastName +
+      ", " +
+      "\n" +
+      "Deck: " +
+      deck
+    );
   },
 };
-console.log(gxCharacter.fullName());
-/******Loops*******/
 
-// for (let i = 0; i < 10; i++) {
-//   console.log(i);
-// }
+//TODO: Loops
 
-for (let i = 0; i < colors.length; i++) {
-  console.log("Color #: " + i);
-  console.log("Color: " + colors[i].toUpperCase());
+//for Loop: Loop to 1 - 5
+
+for (let i = 1; i <= 5; i++) {
+  console.log("Number: " + i);
 }
+console.log("\n");
 
-while (counter < deck.length) {
-  console.log(deck.charAt(counter));
+// Loop an array, using while loop
+// p.s you can also used for loop
+while (counter < colors.length) {
+  console.log("Index: " + counter);
+  console.log("Color: " + colors[counter]);
   counter++;
 }
-/*****functions******/
-
-//Old Way
-
-function getName(myName) {
-  myName = "Jaden Yuki";
-  console.log(myName);
+console.log("\n");
+// Loop an string of text
+while (counter2 < deck.length) {
+  console.log(deck[counter2]);
+  counter2++;
 }
-getName();
+console.log("\n");
 
-function addNums(n1, n2) {
-  return n1 + n2;
+// Multiple Loops
+for (let i = 0, j = 5; i < j; i++, j--) {
+  console.log(i + " of " + j);
 }
-console.log(addNums(5, 10));
-
-function addNums2(n1, n2) {
-  n1 = 23;
-  n2 = 2;
-  return n1 + n2;
+console.log("\n");
+// Nested   Loop
+for (let i = 0; i < 5; i++) {
+  for (let k = 5; k < 10; k++) {
+    console.log(i + " and " + k);
+  }
+  console.log("\n");
 }
-console.log(addNums2());
-function multiplier(num1) {
-  return num1 * 5;
-}
-console.log(multiplier(23));
 
-// New Way
-
-sayHello = () => {
-  console.log("Hello, JavaScript");
-};
-sayHello();
-
-Hello = (val) => {
-  console.log(val + "Universe!");
-};
-Hello("Ola");
-
-greetLinda = (name) => "Hi there, " + name;
-console.log(greetLinda("Linda"));
-
-adder = (n1, n2) => n1 + n2;
-console.log(adder(10, 20));
-
-/*****Loop an object*****/
-
-const keys = Object.keys(gxCharacter);
-for (let i = 0; i < keys.length; i++) {
-  console.log(keys[i] + ": " + gxCharacter[keys[i]]);
-}
+// for (let i = 1; i <= 10; i++) {
+//   let row = "";
+//   for (let j = 1; j <= 10; j++) {
+//     row += i * j + "\t";
+//   }
+//   console.log(row);
+// }
