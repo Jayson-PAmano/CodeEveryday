@@ -41,7 +41,15 @@ console.log("\n");
 // Loop through a string of text
 for (let i = 0; i < deck.length; i++) {
   console.log("Index: " + i);
-  console.log("Letter: " + deck[i].toUpperCase());
+  // console.log("Letter: " + deck[i].toUpperCase());
+  console.log("Letter: " + deck.charAt(i).toUpperCase());
   console.log("\t");
 }
+
 console.log("\n");
+
+//TODO: Multiple loops
+
+for (let i = 0, k = 5; i < k; i++, k--) {
+  console.log(i + " < " + k);
+}
