@@ -21,8 +21,6 @@ newPerson.name = "Bradley";
 console.log(name, newName);
 console.log(person, newPerson);
 
-// TimeStamp:  1:12:54
-
 // let score = 11;
 
 // if (score < 10) {
