@@ -33,6 +33,7 @@ console.log(person.Info.call(person2));
 console.log("\n");
 
 //TODO: Loop an object
+// easy way
 for (let keys in person2) {
   console.log(keys + ": " + person2[keys]);
 }
