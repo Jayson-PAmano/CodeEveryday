@@ -14,5 +14,4 @@ const myString2 = "developer2";
 // let myNewString2 = myString2.charAt(0).toUpperCase() + myString2.substring(1);
 let myNewString2 = myString2.charAt(0).toUpperCase() + myString2.slice(1);
 
-//Time: 1:59:47
 console.log(myNewString2);
