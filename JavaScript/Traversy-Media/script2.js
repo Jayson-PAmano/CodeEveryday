@@ -9,6 +9,7 @@ let amount = 1;
 // amount = Number(amount);
 
 /* number to string*/
+
 // amount = amount.toString();
 // amount = String(amount);
 

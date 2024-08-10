@@ -38,5 +38,7 @@ x = s.replace("World", "John");
 
 x = s.includes("Hello");
 
-//Time: 1:50:54
+x = s.valueOf();
+
+x = s.split("");
 console.log(x);
