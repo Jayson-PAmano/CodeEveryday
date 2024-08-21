@@ -14,7 +14,7 @@ const s = new String("Hello World");
 x = typeof s;
 x = s.length;
 
-//Acces value by key
+//Access value by key
 x = s[1];
 
 x = s.__proto__;

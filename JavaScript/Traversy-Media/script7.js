@@ -5,11 +5,11 @@ x = Math.sqrt(9);
 
 x = Math.abs(-5); //Absolute number
 
-x = Math.round(4.5); // round the numbers up if nasa .5 sya e.g 4.5, round at normally
+x = Math.round(4.5); // round the numbers up if nasa .5 sya e.g 4.5, roundup  normally
 
 x = Math.ceil(4.4); // it will round up the number no matter what
 
-x = Math.floor(4.5); // round down
+x = Math.floor(4.5); // round down the number no matter what
 
 x = Math.pow(2, 3);
 

@@ -23,6 +23,7 @@ x = d.getSeconds();
 
 x = d.getMilliseconds();
 
+//String Literal in date methods
 x = `${d.getFullYear()} - ${d.getMonth() + 1} - ${d.getDate()} `;
 
 x = Intl.DateTimeFormat("en-US").format(d);

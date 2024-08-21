@@ -19,14 +19,29 @@ adds the array e.g [12] from index 0 + from the index 3 of [29]
 
 */
 
+//String Literal in  getting  the Array index
 x = `My favorite fruit is ${fruits[2]}`;
 
 x = numbers.length;
 
 // fruits.length = 2;
 
+/*
+Replacing an items to our Array:
+Will replace the 2nd index of our fruits array "orange" to "pear"
+the results will be:
+
+[ "apple", "grapes", "pear" ]
+*/
 fruits[2] = "pear";
 
+/*
+Adding an items to our Array:
+Will add an array into the 3rd index of our fruits array, which is an empty,
+the results will be:
+
+[ "apple", "grapes", "pear", "strawberry" ]
+*/
 fruits[3] = "strawberry";
 
 fruits[fruits.length] = "blueberry";

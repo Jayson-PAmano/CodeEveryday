@@ -19,9 +19,10 @@ arr.shift();
 //reversed the array
 // arr.reverse();
 
-//Mixing string methods with array methods
+/* Mixing string methods with array methods 
+    ⇩ ⇩ ⇩
+*/
 x = arr.includes(200);
-
 x = arr.indexOf(15);
 
 //will not change the initial array
@@ -30,7 +31,6 @@ x = arr.slice(1, 4);
 //does change the original array , it will delete then from the initial array
 //x = arr.splice(1, 4);
 //x = arr.splice(3, 1);
-
 x = arr.splice(1, 4).reverse().toString().charAt(0);
 
 // console.log(x, arr);
