@@ -103,4 +103,4 @@ function john(user) {
 }
 
 const index2 = users.findIndex(john);
-console.log(index2);
+console.log("Index of John:" + index2);

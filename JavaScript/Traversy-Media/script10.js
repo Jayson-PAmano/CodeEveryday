@@ -19,7 +19,7 @@ adds the array e.g [12] from index 0 + from the index 3 of [29]
 
 */
 
-//String Literal in  getting  the Array index
+//Template Literal in  getting  the Array index
 x = `My favorite fruit is ${fruits[2]}`;
 
 x = numbers.length;

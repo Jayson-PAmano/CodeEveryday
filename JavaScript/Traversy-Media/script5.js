@@ -23,8 +23,14 @@ x = s.toUpperCase();
 x = s.toLowerCase();
 
 x = s.charAt(0);
-
+/*
+    count the given string and ouput the result
+    s.charAt(0); Will retrun "H" coz it start counting from zero
+*/
 x = s.indexOf("d");
+/*
+    s.indexOf("d"); Will return the index of 10
+*/
 
 x = s.substring(0, 4);
 
